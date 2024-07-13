@@ -15,7 +15,7 @@ public class Libro {
     private String titulo;
 
 
-    @ElementCollection(targetClass = Lenguaje.class)
+    @ElementCollection(targetClass = Lenguaje.class, fetch = FetchType.EAGER)
     @Enumerated(EnumType.STRING)
     //@Column(name = "lenguaje")
     private List<Lenguaje> lenguajes;
