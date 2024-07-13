@@ -2,10 +2,11 @@ package com.alura.literalura.model;
 
 public enum Lenguaje {
     ESPAÑOL("es","español"),
-    INGLES("en", "ingles"),;
-
+    INGLES("en", "ingles"),
+    ITALIANO("it", "italiano"),;
     private String lenguajeGutendex;
     private String lenguajeEspañol;
+
 
     Lenguaje(String lenguajeGutendex, String lenguajeEspañol){
         this.lenguajeEspañol = lenguajeEspañol;
@@ -15,6 +16,7 @@ public enum Lenguaje {
     public static Lenguaje fromString(String text) {
         for (Lenguaje lenguaje: Lenguaje.values()){
             if (lenguaje.lenguajeGutendex.equalsIgnoreCase(text) || lenguaje.lenguajeEspañol.equalsIgnoreCase(text)){
+
                 return lenguaje;
             }
         }
